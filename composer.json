@@ -1,0 +1,27 @@
+{
+    "name": "shekarsiri/baserepo",
+    "description": "Base repositories",
+    "keywords": [
+        "repositories",
+        "laravel 5",
+        "base repositories"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shekarsiri",
+            "email": "sshekarsiri@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShekarSiri\\Repositories\\": "src/Repositories"
+        }
+    }
+
+}
