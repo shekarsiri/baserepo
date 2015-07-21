@@ -39,4 +39,6 @@ interface Crudable
      * @return mixed
      */
     public function delete($id);
+
+    public function order($by, $order);
 }
