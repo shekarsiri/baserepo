@@ -1,9 +1,9 @@
 <?php namespace ShekarSiri\BaseRepo;
 
 
-abstract class AbstractPagination
+trait PaginationTrait
 {
-    public function pagination($total = 10)
+    public function pagination($total = 10, array $query = [], array $columns = ['*'])
     {
         $models = $this->model->paginate($total);
         return $models;

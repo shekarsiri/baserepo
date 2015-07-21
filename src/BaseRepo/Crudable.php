@@ -40,5 +40,5 @@ interface Crudable
      */
     public function delete($id);
 
-    public function order($by, $order);
+    //public function order($by, $order);
 }

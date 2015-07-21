@@ -1,7 +1,7 @@
 <?php namespace ShekarSiri\BaseRepo;
 
 
-abstract class AbstractRepositoryEloquent
+trait RepositoryEloquentTrait
 {
     /**
      * @var
@@ -44,17 +44,7 @@ abstract class AbstractRepositoryEloquent
         return $entity->findOrFail($id);
     }
 
-    /**
-     * @param       $key
-     * @param       $value
-     * @param array $with
-     *
-     * @return mixed
-     */
-    public function getBy($key, $value, array $with = array())
-    {
-        return $this->make($with)->where($key, '=', $value)->get();
-    }
+
 
     /**
      * @param array $data
@@ -95,10 +85,7 @@ abstract class AbstractRepositoryEloquent
         return $model->delete();
     }
 
-    public function count()
-    {
-        return $this->model->count();
-    }
+
 
     /**
      * @param int $page
