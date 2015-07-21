@@ -1,7 +1,7 @@
 <?php namespace ShekarSiri\BaseRepo;
 
 
-class AbstractRepositoryEloquent
+abstract class AbstractRepositoryEloquent
 {
     /**
      * @var

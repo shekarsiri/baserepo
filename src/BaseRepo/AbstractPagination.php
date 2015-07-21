@@ -1,7 +1,7 @@
 <?php namespace ShekarSiri\BaseRepo;
 
 
-class AbstractPagination
+abstract class AbstractPagination
 {
     public function pagination($total = 10)
     {
