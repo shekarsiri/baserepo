@@ -54,6 +54,12 @@ trait CrudableTrait
         // TODO: Implement create() method.
     }
 
+    public function firstOrCreate(array $data)
+    {
+        $model = $this->model->firstOrCreate($data);
+        return $model;
+    }
+
     /**
      * @param       $id
      * @param array $data

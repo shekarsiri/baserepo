@@ -25,6 +25,9 @@ interface Crudable
      */
     public function create(array $data);
 
+
+    public function firstOrCreate(array $data);
+
     /**
      * @param       $id
      * @param array $data
