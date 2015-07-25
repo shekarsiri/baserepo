@@ -3,5 +3,5 @@
 
 interface Pagination
 {
-    public function pagination($total, array $query = [], array $columns = ['*']);
+    public function pagination($total = 10, array $with = [], array $query = [], array $columns = ['*'])
 }
