@@ -15,16 +15,7 @@ trait RepoTrait
      */
     public function getBy($key, $value, $operator = '=', array $with = array())
     {
-        $operator = strtolower($operator);
-        switch ($operator) {
-            case '=':
-            case '>':
-                return $this->make($with)->where($key, $operator, $value)->get();
-                break;
-            case 'like':
-                return $this->make($with)->where($key, 'LIKE', '%' . $value . '%')->get();
-                break;
-        }
+        return $this->make($with)->where($key, $operator, $value)->get();
     }
 
     public function count()
