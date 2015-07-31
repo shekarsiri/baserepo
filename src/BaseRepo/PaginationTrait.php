@@ -28,12 +28,6 @@ trait PaginationTrait
                                 $q->whereIn($key, $val);
                                 break;
 
-                            case 'whereHas':
-                                $q->whereHas($val[0], function ($q) use ($val) {
-                                    $q->where($val[1], $val[2]);
-                                });
-                                break;
-
                             default:
                                 $q->where($key, $val);
                                 break;
@@ -47,7 +41,7 @@ trait PaginationTrait
                                 break;
                         }
                     }
-                    
+
                 }
             }
         });
