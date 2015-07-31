@@ -26,8 +26,8 @@ trait PaginationTrait
                             break;
 
                         case 'whereHas':
-                            $q->whereHas($key, function ($q) use ($val) {
-                                $q->where($val[0], $val[1]);
+                            $q->whereHas($val[0], function ($q) use ($val) {
+                                $q->where($val[1], $val[2]);
                             });
                             break;
 
