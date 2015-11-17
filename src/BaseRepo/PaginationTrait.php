@@ -6,7 +6,7 @@ trait PaginationTrait
     public function pagination($total = 10, array $with = [], array $query = [], array $columns = ['*'])
     {
         //WITH Relations
-        $model = $this->make($with);
+        $model = $this->make($with)->latest();
 
         //QUERY
         $model = $model->where(function ($q) use ($query) {
