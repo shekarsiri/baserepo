@@ -15,7 +15,7 @@ trait RepoTrait
      */
     public function getBy($key, $value, $operator = '=', array $with = array())
     {
-        return $this->make($with)->where($key, $operator, $value)->get();
+        return $this->make($with)->where($key, $operator, $value)->first();
     }
 
     public function count()
